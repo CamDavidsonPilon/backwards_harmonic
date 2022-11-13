@@ -56,8 +56,8 @@ def display(f, up_to_n, width=100):
         print()
 
 
-display(quintic, 9, width=60)
-emp_verify(quintic, 200)
+display(quartic, 9, width=60)
+emp_verify(quartic, 200)
 
 
 
