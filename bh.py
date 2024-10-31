@@ -47,6 +47,10 @@ def emp_verify(f, up_to_n):
 def bh(f, n):
     return [f(n, k) for k in range(-n, n+1, 2)]
 
+def bh_grid(f, n, max_):
+    return [str(f(n, k)).center(4) for k in range(-max_, max_+1, 1)]
+
+
 
 def display(f, up_to_n, width=100):
     for n in range(up_to_n):
@@ -56,8 +60,16 @@ def display(f, up_to_n, width=100):
         print()
 
 
-display(quartic, 9, width=60)
-emp_verify(quartic, 200)
+def display_grid(f, up_to_n, width=100):
+    for n in range(-up_to_n, up_to_n, 1):
+        print(str(n).zfill(2), end='')
+        print(str(bh_grid(f, n, up_to_n)).center(width), end='')
+        print()
+
+
+
+display(quad, 9, width=60)
+emp_verify(quad, 200)
 
 
 
